@@ -1,2 +1,3 @@
 # web
-html, css 공부
+html, css, javascript 공부
+
