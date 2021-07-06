@@ -25,3 +25,5 @@ fruits.forEach((v, i) => {
 // shift : 앞에 빼기
 
 // shift, unshift는 pop, push에 비해 엄청 느리다.
+
+// shift, unshift는 pop, push에 비해 엄청 느리다.
