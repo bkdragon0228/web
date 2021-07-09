@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>박스 모델 이해하기.</title>
+        <style>
+            body > div {
+                border: 1px solid slategray;
+                margin: 10px;
+                outline: red dotted 1px;
+                padding: 0 0 0 20px;
+            }
+            .concept {
+                background-color: rgb(171, 238, 250);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="concept">
+            <h1>margin, padding</h1>
+            <p>
+                마진은 요소의 바깥여백을 패딩은 요소의 안쪽 여백을 지정하는 속성
+            </p>
+            <h1>border</h1>
+            <p>보더는 요소에 대한 선을 적용할 때 사용하는 속성</p>
+            <p>width, style, color 한번에 선언 할 수 있다.</p>
+            <h4 style="color: red">
+                마진, 패딩, 보더의 공간 설정방향은 위에서부터 시계방향 순이다.
+            </h4>
+            <h1>outline</h1>
+            <p>
+                아웃라인은 요소 바깥 주위에 둘러지는 선이며 만약 요소에 보더가
+                적용되어있다면 그 바깥에 생성된다.
+            </p>
+        </div>
+        <div>
+            <h1>너비, 높이</h1>
+            <p>width -- 박스(요소) 너비</p>
+            <p>height -- 박스(요소) 높이</p>
+            <p>min-width --박스(요소)가 가질 수 있는 최소 너비</p>
+            <p>min-height -- 박스(요소)가 가질 수 있는 최소 최소 높이</p>
+            <p>max-width -- 박스(요소)가 가질 수있는 최소 최대 너비</p>
+            <p>max-height -- 박스(요소)가 가질 수 있는 최소 최대 높이</p>
+        </div>
+    </body>
+</html>

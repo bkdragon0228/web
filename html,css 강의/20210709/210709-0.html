@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BOX model</title>
+        <style>
+            div {
+                width: 100px;
+                height: 100px;
+                border: 4px solid slategray;
+                padding: 10px 10px 10px 10px; /*시계방향*/
+                /* 보더와 안쪽의 간격 */
+            }
+            .wrap {
+                /* width: 100px;
+                height: 100px; */
+                border: 4px solid slategray;
+                margin-bottom: 30px;
+                /* 마진은 엘리먼트간의 간격을 조절 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">div elements</div>
+        <div>other div elements</div>
+        <p>
+            인접한 두개의 블록 엘리먼트가 서로다은 마진을 가지고 있다면 큰 값을
+            가진 마진값이 공유되어 사용됨 ex ) 10px + 20px = 20px
+        </p>
+        <p>
+            인접한 두개의 인라인 엘리먼치의 마진은 각각으이 마진의 합으로
+            표현된다. ex) 10px + 20px = 30px
+        </p>
+    </body>
+</html>

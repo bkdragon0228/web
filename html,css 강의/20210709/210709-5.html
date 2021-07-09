@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>block vs inline</title>
+        <style>
+            #box > div,
+            #box > span {
+                border: 2px solid red;
+                margin: 3px 0;
+                padding: 5px;
+            }
+            .none {
+                display: none;
+            }
+            .block1 {
+                display: block;
+            }
+            .block2 {
+                display: block;
+                width: 300px;
+                height: 60px;
+            }
+            .inline {
+                display: inline;
+                width: 200px;
+                height: 60px;
+            }
+            .inline-block {
+                display: inline-block;
+                width: 200px;
+                height: 60px;
+            }
+        </style>
+        <script>
+            // block : 한 영역을 차지하는 박스형태를 가진다.
+            // height, width, margin, padding을 지정 할 수 있다
+            // -------------------------------------------------
+            // liline : 주로 텍스트를 주입 할 떄 사용되는 형태이다. 그렇기 떄문에
+            // width가 기본적으로 100%가 아니라 컨테츠 영역 만큼 자동으로 잡히게 되며
+            // 새로운 라인이 추가되지 않는다.
+            // width,height x, margin 위아래가 적용 x
+            // -----------------------------------------------------------------
+            // inline-block : 줄바꿈 x width,heigth 지정 가능, 지정안하면 inline처럼
+        </script>
+    </head>
+    <body>
+        <div id="box">
+            <div class="none">none</div>
+            <!-- 화면에 안 보임 -->
+            <div class="block1">block1</div>
+            <!-- div에는 display : block;이 기본값이다. -->
+            <div class="block2">block2</div>
+            <span class="inline">inline</span>
+            <span class="inline-block">inline-block</span>
+            <span>defaualt inline-block</span>
+            <div>block3</div>
+        </div>
+    </body>
+</html>

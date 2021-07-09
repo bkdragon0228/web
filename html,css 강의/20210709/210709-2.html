@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Float 기반 layouut</title>
+        <style>
+            .wrap > div {
+                border: 1px solid gray;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                /* float: left; */
+                /* 좌로 배치됨 */
+            }
+            .wrap > div:nth-child(1) {
+                color: red;
+                float: right;
+                /* margin-left: 100px; */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+        </div>
+        <div></div>
+    </body>
+</html>

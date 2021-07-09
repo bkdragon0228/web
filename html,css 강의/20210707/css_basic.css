@@ -1,0 +1,5 @@
+div > p {
+    color: red; 
+    /* 색은 적용이 안될거임 */
+    border: 1px solid slategray;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS 상속</title>
+        <style>
+            body > div {
+                /* body 바로 아래 div에만 적용 */
+                color: red;
+                font-size: 30px;
+                /* 자식관계(안에있으면) 다 적용 */
+                border: 2px solid slategray;
+                padding: 30px;
+                /* 배치와 관련된것은 상속x */
+            }
+            div ul li div p {
+                /* 자손 */
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span>my text is upper!</span>
+            <ul>
+                <li>
+                    <span>my text is dummy</span>
+                    <div>
+                        <p>helloword~</p>
+                    </div>
+                </li>
+                <li>
+                    <span>my text is dummy2</span>
+                    <div>
+                        <p>helloworld2</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

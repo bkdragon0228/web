@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Position 속성을 이용한 layout</title>
+        <style>
+            .wrap {
+                position: relative;
+                /* 기준점을 잡기위해서 넣기 */
+            }
+            .wrap > div {
+                border: 1px solid gray;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+                /* 상하좌우 다 마진 넣음 */
+                /* position: static; 기본값 */
+            }
+            .wrap > div:nth-child(3) {
+                /* wrap의 자식중 두번째 값 */
+                color: red;
+                position: relative;
+                top: 40px;
+                left: 40px;
+                /* 원래위치에서 입력한 만큼 움직인다. */
+            }
+            .wrap > div:nth-child(2) {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                /* position이 static이 아닌 것을 기준으로 자신의 절대적인 위치 */
+                /* 이경우엔 body가 기준 */
+            }
+            .wrap > div:nth-child(1) {
+                position: fixed;
+                top: 100px;
+                left: 200px;
+                /* 스크롤을 해도 움직이지 않는다. */
+                /* 고정된 배너를 만들 때 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+        </div>
+    </body>
+</html>

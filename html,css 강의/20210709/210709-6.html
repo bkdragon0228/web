@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>vertical-align</title>
+        <style>
+            span {
+                font-size: 50px;
+                border: 2px solid;
+                line-height: 80px;
+            }
+            .base {
+                vertical-align: baseline;
+            }
+            .sub {
+                vertical-align: sub;
+            }
+            .super {
+                vertical-align: super;
+            }
+            .text-top {
+                vertical-align: text-top;
+            }
+            .text-bottom {
+                vertical-align: text-bottom;
+            }
+            .middle {
+                vertical-align: middle;
+            }
+        </style>
+        <script>
+            //             vertical-align 속성
+            // 요소의 수직 정렬을 지정하는 속성입니다. (인라인레벨요소에 적용 가능)
+
+            // 속성값(기본값:baseline)
+
+            // 1. length : 요소의 길이만큼 올리거나 내리며 음수 값도 사용 가능합니다. (px값 사용 시 baseline을 기준으로 이동)
+
+            // 2. % : 요소를 line-height 기준으로 이동하며 음수 값 사용 가능합니다.
+
+            // 3. 키워드 : baseline, sub, super, top, text-top, middle, bottom, text-bottom
+
+            // baseline은 소문자 x를 기준으로 하단 라인을 의미합니다. 부모요소의 기준 선에 맞춤.
+
+            // sub 부모 아래 첨자 기준으로 정렬
+
+            // super : 부모 위 첨자 기준으로 정렬
+
+            // text-top : 요소의 맨 위를 부모 font의 맨 위(Ascender 제외)에 맞춤.
+
+            // text-bottom : 요소의 맨 아래를 부모 font의 맨 아래(Descender 제외)에 맞춤.
+
+            // middle : 부모의 중앙에 위치. 소문자x를 기준으로 중앙에 정렬.
+
+            // top : 요소의 맨위를 줄에서 가장 큰 요소의 맨 위 위치에 맞춤.
+
+            // bottom : 요소의 맨 아래를 줄에서 가장 낮은 요소에 맞춤.
+        </script>
+    </head>
+    <body>
+        <span>부모요소<span class="base">baseline</span></span
+        ><br />
+        <span>부모요소<span class="sub">sub</span></span
+        ><br />
+        <span>부모요소<span class="super">super</span></span
+        ><br />
+        <span>부모요소<span class="text-top">text-top</span></span
+        ><br />
+        <span>부모요소<span class="text-bottom">text-bottom</span></span
+        ><br />
+        <span>부모요소<span class="middle">middle</span></span
+        ><br />
+    </body>
+</html>

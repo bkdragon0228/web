@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>COLOR, FONT 스타일 변경방법</title>
+        <style>
+            body > div {
+                font-size: 32px;
+                background-color: red;
+                font-family: monospace;
+            }
+            .myspan {
+                color: yellow(158, 240, 192);
+                font-size: 2em;
+                /* 64px가 됨 */
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span class="myspan">my text is upper!</span>
+        </div>
+    </body>
+</html>
