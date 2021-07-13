@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>float기반 layout 2편</title>
+        <style>
+            .wrap {
+                background-color: slategray;
+                padding: 0.5rem;
+                width: 300px;
+                box-sizing: border-box;
+                /* 마진이나 보더말고 컨텐츠 자체를 width가 정하는 것이다. */
+                /* border-box로 하면 보더값이 달라도 같은 크기로 만들어준다. */
+                overflow: auto;
+                /* 플로트를 한 자식을 인식못하는 경우가 해결된다.  */
+            }
+            .wrap > div {
+                background-color: #333;
+                width: 50px;
+                height: 50px;
+                margin: 0.5rem;
+                color: #fff;
+                float: left;
+                /* 플로트를 쓰면 부유됨(무시됨) */
+                /* 플로트를 적용하면 이후에 오는 글자나 다른 컨텐츠가 그 위로 올라요는 형태가 된다. */
+            }
+            footer {
+                width: 300px;
+                height: 100px;
+                background-color: #bb3;
+                margin-top: 0.5rem;
+                clear: left;
+                /* 플로트를 적용한 컨텐츠 위를 침범하지 않게 하는 속성 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div>first</div>
+            <div>second</div>
+            <div>third</div>
+            <footer></footer>
+        </div>
+        <!-- <footer></footer> -->
+    </body>
+</html>
