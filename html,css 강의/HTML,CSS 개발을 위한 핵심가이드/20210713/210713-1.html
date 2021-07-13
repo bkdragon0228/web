@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>flex 속성 공부</title>
+        <style>
+            .container {
+                background-color: slategray;
+                height: 200px;
+                display: flex;
+                /* 부모요소를 플렉스컨테이너라  하고 거기에 적용해줘야한다. */
+                flex-direction: row-reverse;
+                /* 방향 결정 */
+                flex-wrap: wrap;
+                /* 줄바꿈을 어떻게 할지에 대한 속성 */
+                justify-content: space-evenly;
+                /* 세로정렬 */
+                align-items: center;
+                /* 가로정렬 */
+            }
+            .item {
+                /* width: 150px; */
+                height: 50px;
+                /* height를 안주면 container의 높이와 같게 된다. */
+                background-color: skyblue;
+                flex-basis: 100px;
+                /* 원래 100px가 넘는 값은 그대로 유지된다. */
+                flex-basis: auto;
+                /* width: 100px; */
+                flex-grow: 0;
+                /* flex-grow에 들어가는 숫자의 의미는, 
+                아이템들의 flex-basis를 제외한 여백 부분을 flex-grow에 지정된 숫자의 비율로 나누어 가진다 */
+            }
+            .item:nth-child(2) {
+                width: 300px;
+                flex-shrink: 0;
+                /* 300px보다 작아지지 않는 설정, 기본값은 1이다. */
+                /* flex-shrink는 flex-grow와 쌍을 이루는 속성으로, 
+                아이템이 flex-basis의 값보다 작아질 수 있는지를 결정합니다 */
+                align-self: flex-end;
+                /* align-items 보다 우선권이 있다. */
+                z-index: 1;
+                transform: scale(2);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">first</div>
+            <div class="item">second22222222222222</div>
+            <div class="item">third</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>flex 기반 layout</title>
+        <style>
+            .wrap {
+                background-color: slategray;
+                height: 500px;
+                display: flex;
+                /* 하위에 있는걸 플렉스로 다루겠다. */
+                flex-direction: row;
+                justify-content: flex-end;
+                /* align-items: center; */
+            }
+            .wrap > div {
+                /* width: 200px;
+                height: 200px; */
+                height: 30px;
+                padding: 0.5rem;
+                margin: 0.5rem;
+                background-color: skyblue;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div>login</div>
+            <div>home</div>
+            <div>about</div>
+        </div>
+    </body>
+</html>
