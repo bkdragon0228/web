@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>선택자와 선언, 선택자 종류</title>
+        <style>
+            /* li는 태그셀렉터(선택자) */
+            li {
+                color: red;
+                text-decoration: underline;
+                /* 안쪽이 선언 */
+                /* :(구분자) 좌측은 속성, 우측은 값 */
+            }
+            /* id 셀렉터 */
+            /* id는 유일하게 사용해야한다. */
+            #select {
+                font-size: 50px;
+            }
+            /* class 셀렉터 */
+            .deactive {
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="deactive">수업의 순서</h1>
+        <!-- 서로 다른 태그에도 class를 공유해도 된다. -->
+        <ul>
+            <li class="deactive">HTML</li>
+            <li id="select">CSS</li>
+            <li class="deactive">JACASCRIPT</li>
+        </ul>
+    </body>
+</html>
