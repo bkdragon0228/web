@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>부모 자식 선택자</title>
+        <style>
+            /* ul의 밑에 있는 (모든)li만 */
+            ul li {
+                color: red;
+            }
+            /* 직계 자식 선택자 */
+            #lecture > li {
+                border: 1px solid red;
+                color: blue;
+                /* 상속 */
+            }
+            /* 두가지 이상 */
+            ul,
+            ol {
+                background-color: powderblue;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+        </ul>
+        <ol id="lecture">
+            <li>html</li>
+            <li>
+                css
+                <ol>
+                    <li>selector</li>
+                    <li>declaration</li>
+                </ol>
+            </li>
+            <li>javascript</li>
+        </ol>
+    </body>
+</html>
