@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>box-sizing</title>
+        <style>
+            div {
+                margin: 10px;
+                width: 150px;
+                /* border를 제외한 부분이 width  */
+                box-sizing: content-box;
+                /* 기본값 */
+                box-sizing: border-box;
+                /* border까지 고려해서 같은 크기가 됨 */
+            }
+            #small {
+                border: 10px solid black;
+            }
+            #large {
+                border: 30px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="small">hello</div>
+        <div id="large">hello</div>
+    </body>
+</html>
