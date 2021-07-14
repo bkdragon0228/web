@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>inline vs block</title>
+        <style>
+            h1,
+            a {
+                border: 1px solid red;
+            }
+            h1 {
+                display: inline;
+            }
+            a {
+                display: block;
+            }
+            /* 언제든 바꿀 수 있다. */
+        
+        </style>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        안녕하세요. <a href="#">생활코딩</a>입니다.
+        <div>
+            <p>
+                <h5>대표적인 인라인 태그</h5>
+                <ul>
+                    <li>a</li>
+                    <li>span</li>
+                    <li>em</li>
+                    <li>인라인 태그에서는 width, height를 지정해도 무시된다.</li>
+                    <li>
+                        margin, padding은 좌우간격만 반영이 된다.
+                    </li>
+                </ul>
+            </p>
+            <p>
+                <h5>대표적인 블록레벨 태그</h5>
+                <ul>
+                    <li>div</li>
+                    <li>p</li>
+                    <li>h1~5</li>
+                </ul>
+            </p>
+            <p>
+                <h5>inline-block</h5>
+                <ul>
+                    <li>button</li>
+                    <li>select</li>
+                </ul>
+                줄바꿈 없이 width,height, margin,padding이 다 정상 작동
+            </p>
+        </div>
+    </body>
+</html>
