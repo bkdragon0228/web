@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>캐스캐이딩</title>
+        <style>
+            li {
+                color: red !important ;
+                /* 우선순위를 가장 높히는 방법 */
+            }
+            #idsel {
+                color: blue;
+            }
+            .classel {
+                color: green;
+            }
+            /* 인라인 > id > class > tag  */
+            ol > li {
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>html</li>
+            <li id="idsel" class="classel" style="color: powderblue">css</li>
+            <li>javascript</li>
+        </ul>
+        <h5>우선순위</h5>
+        <ol>
+            <li>style attribute</li>
+            <li>id selector</li>
+            <li>class selector</li>
+            <li>tag selector</li>
+        </ol>
+    </body>
+</html>
