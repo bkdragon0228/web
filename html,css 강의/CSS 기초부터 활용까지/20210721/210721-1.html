@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포지션</title>
+        <style>
+            /* html {
+                position: relative;
+            } */
+            #parent,
+            #other,
+            #grand {
+                border: 5px solid tomato;
+                /* margin: 10px; */
+            }
+            /* #me { */
+            /* position: relative; */
+            /* 이게 없으면 오프셋이 적용이 안됨. */
+            /* 포지션 기본값이 static이기 떄문 ! */
+            /* left: 100px;
+                top: 100px; */
+            /* 왼쪽으로 부터 100px, 위로부터 100px (오프셋)*/
+            /* } */
+            #grand {
+                position: relative;
+                /* 올라가다가 포지션이 static이 아닌거를 발견하면 그걸 기준으로 */
+                /* 앱솔루트가 작동함, 이게 없으면 html이 기준! */
+            }
+            #me {
+                background-color: black;
+                color: white;
+                position: absolute;
+                left: 0;
+                top: 0;
+                /* 오프셋값을 안주면 부모엘리먼트 기준, 주면 html기준 */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+        <div id="grand">
+            grand
+            <div id="parent">
+                parent
+                <div id="me">me</div>
+                <!-- me 엘리먼트는 parent의 자식이 아닌것 처럼 행동한다
+                크기가 컨텐츠 크기로 변한다. -->
+            </div>
+        </div>
+    </body>
+</html>

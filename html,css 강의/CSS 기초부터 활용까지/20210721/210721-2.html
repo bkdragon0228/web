@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포지션22</title>
+        <style>
+            /* html {
+                position: relative;
+            } */
+            #parent,
+            #other {
+                border: 5px solid tomato;
+                /* margin: 10px; */
+            }
+            #large {
+                height: 10000px;
+                background-color: red;
+            }
+
+            #me {
+                background-color: black;
+                color: white;
+                position: fixed;
+                /* 스크롤이 생겨도 me가 고정 */
+                left: 0;
+                /* right: 0;
+                오른쪽 고정 */
+                /* top: 0; */
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                /* 하단 고정 ul를 만들었다. */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="other">other</div>
+
+        <div id="parent">
+            parent
+            <div id="me">me</div>
+            <!-- me 엘리먼트는 parent의 자식이 아닌것 처럼 행동한다
+                크기가 컨텐츠 크기로 변한다. -->
+        </div>
+        <div id="large">large</div>
+    </body>
+</html>
