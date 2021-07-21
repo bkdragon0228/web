@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flex</title>
+        <style>
+            .container {
+                background-color: powderblue;
+                height: 200px;
+                display: flex;
+                /* 1. 부모에 flex를 적용 */
+                /* flex-direction: row; (수직)가 초기값 */
+                flex-direction: row-reverse;
+                /* 반대쪽 정렬하는 속성 */
+                flex-direction: column;
+                /* 위아래(수평)로 정렬 */
+                flex-direction: row;
+            }
+            .item {
+                background-color: tomato;
+                color: white;
+                border: 1px solid white;
+                /* flex-grow: 0; 기본값 */
+                /* flex-grow: 1; */
+                /* 여백을 채운디. 1/n 한다고 생각하면됨 */
+            }
+            .item:nth-child(2) {
+                /* flex-basis: 200px; */
+                /* flex-direction 에 맞는 기본 크기를 설정 */
+                /* flex-grow: 2; */
+                /* 다른거에 크기가 2배됨 */
+                /* 상대적인 값이다. */
+            }
+            .item:nth-child(3) {
+                flex-basis: 300px;
+                flex-shrink: 1;
+                /* 기본값 */
+                /* 창을 줄이면 크기가 줄어듦 */
+                /* 값을 0으로 주면 줄어들지 않는다. */
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 컨테이너 역할과 자식에 아이템 역할을 하는 태그가 있어야함 -->
+        <!-- 부모와 자식 태그가 있어야함  -->
+        <!-- 각각 부여하는 속성이 구분이 되어 있다. -->
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>
