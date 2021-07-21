@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>마진겹침</title>
+        <style>
+            h1 {
+                border: 1px solid red;
+                margin: 100px;
+            }
+            li {
+                margin: 20px;
+            }
+            #parent {
+                /* border: 1px solid tomato; */
+                /* 보더가 없어지면 마진겹침이 일어남. */
+                margin-top: 100px;
+            }
+            #child {
+                background-color: powderblue;
+                margin-top: 50px;
+                /* child의 마진값이 없는것처럼 작동 더 작은값이라 */
+            }
+            #empty {
+                margin-top: 50px;
+                margin-bottom: 100px;
+                /* border: 1px solid tomato; */
+                /* 시각적인 요소가 없는 태그는 위, 아래중 큰 값을 마진으로 같는다. */
+            }
+            #normal {
+                background-color: powderblue;
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>hello world</h1>
+        <h1>hello world</h1>
+        <!-- 마진이 겹친 상태로 나온다 -->
+        <!-- 위, 아래 태그 중 더 큰 마진이 두 태그 사이에 간격이 된다.0 -->
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>javascript</li>
+        </ul>
+        <hr />
+        <div id="parent">
+            <div id="child">hello world</div>
+        </div>
+        <!-- 부모태그가 시각적으로 아무 효과가 없으면, 자식태그와 부모태그의 
+        마진값이 합쳐진다. -->
+        <hr />
+        <div id="empty"></div>
+        <div id="normal">normal</div>
+    </body>
+</html>
