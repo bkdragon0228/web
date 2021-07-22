@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    /* 위아래로 */
+    height: 100%;
+}
+header {
+    height: 65px;
+    background-color: rgb(121, 218, 121);
+}
+.tablist {
+    height: 70px;
+    box-shadow: 0 2px 2px 0;
+    /* 오른쪽과 아래에 box shadow  */
+    background-color: white;
+}
+.content {
+    flex: 1;
+    /* flex-grow 1을 해야지 화면에 content가 보인다!
+    왜냐하면 지금 실제로 보이는 요소를 입럭 안해서 아직 안보이는데
+    여백을 채워야지 보이는 것 */
+    display: flex;
+    /* flex-direction: row; 
+    초깃값으로 적용이 되어있다
+    그래서 aside과 main이 양옆으로 적용되는것*/
+}
+aside {
+    display: flex;
+    flex-basis: 400px;
+    flex-grow: 0;
+    /* width: 400px; */
+    background-color: #bfbab078;
+}
+.main {
+    display: flex;
+    flex: 1;
+    /* flex : 1;은 flex: 1 1 0 ; 과 같다. */
+    overflow: auto;
+}
