@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: #00c73c;
+}
+.gnb, .logo, .search {
+    flex: none;
+    /* flex : 0 0 auto; 와 none은 같은 표현 */
+}
+.gnb {
+    margin-left: auto;
+    /* 바깥 여백이 왼쪽의 모든 공간을 차지하기 떄문에 */
+    /* 오른쪽으로 붙는형태가 된다. */
+}
+.logo, .gnb {
+    padding: 20px 30px ;
+    /* 위아래 마진 20, 좌우 마진 30 */
+    background-color: rgba(0, 0, 0, .4);
+}
+.search {
+    display: flex;
+    width: 400px;
+    padding: 14px 0;
+    /* 위아래 패딩 14, 좌우 패딩 0 */
+    margin-left: 10px;
+}
+.search_button {
+    width: 37px;
+    border: 0;
+    background-color: #26a93a;
+}
+input {
+    flex:1; 
+    /* 1 1 0 */
+    width:322px;
+    height: 37px;
+    background-color: white;
+}
