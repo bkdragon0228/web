@@ -1,0 +1,17 @@
+.filter {
+    display: flex;
+    height: 70px;
+    padding-left:8px;
+    box-shadow: 0 2px 20px 0 rgba(0,0,0,0.1);
+    background-color: white;
+}
+.filter_box {
+    flex: 0 1 auto;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 38px;
+    padding: 8px;
+    background-color: white;
+}   
