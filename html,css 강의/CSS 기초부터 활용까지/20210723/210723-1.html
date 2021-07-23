@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>float를 이용한 holy grail 레이아웃</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            .container {
+                width: 540px;
+                border: 1px solid gray;
+                margin: 0 auto;
+            }
+            header {
+                border-bottom: 1px solid gray;
+                /* width: 690px; */
+            }
+            /* nav,
+            article,
+            aside {
+                border: 1px solid gray;
+            } */
+            nav {
+                float: left;
+                width: 120px;
+                border-right: 1px solid gray;
+            }
+            article {
+                float: left;
+                width: 300px;
+                padding: 10px;
+                border-left: 1px solid gray;
+                margin-left: -1px;
+                /* 선이 겹쳐보이는걸 없앰 */
+                border-right: 1px solid gray;
+            }
+            aside {
+                float: left;
+                padding: 10px;
+                width: 120px;
+                border-left: 1px solid gray;
+                margin-left: -1px;
+            }
+            footer {
+                clear: both;
+                border: 1px solid gray;
+                text-align: center;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>CSS</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li>position</li>
+                    <li>float</li>
+                    <li>flex</li>
+                </ul>
+            </nav>
+            <article>
+                <h2>float</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+                aut fugiat accusamus repudiandae quidem distinctio, reiciendis
+                eveniet dolores, consectetur voluptates, dolor error pariatur
+                vitae explicabo eligendi nulla architecto nostrum fugit vero?
+                Error nulla maxime aliquam laudantium, accusamus deleniti beatae
+                soluta sint non quo temporibus atque, delectus ullam blanditiis
+                consequatur totam?
+            </article>
+            <aside>ad</aside>
+            <footer>copyleft</footer>
+        </div>
+    </body>
+</html>
