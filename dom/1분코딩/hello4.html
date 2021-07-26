@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript3</title>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .images img {
+                width: 100px;
+            }
+            .images {
+                display: inline-block;
+                list-style: none;
+                /* border: 1px solid red; */
+            }
+            .link-google {
+                color: red;
+            }
+            .special {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">JS, DOM</h1>
+        <div>
+            <ul class="mother">
+                <li class="images">
+                    <img src="./다운로드.png" alt="" />
+                    <a class="link-google" href="http://google.com">Google</a>
+                </li>
+                <li class="images"><img src="./images (1).png" alt="" /></li>
+                <li class="images"><img src="./images.png" alt="" /></li>
+            </ul>
+        </div>
+        <script>
+            let listElem = document.createElement('li'); // 만들 태그를 입력
+            listElem.innerHTML = '<span> 일분이</span>';
+            console.log(listElem);
+            // 여기까지 만드는 작업.
+            let motherElem = document.querySelector('.mother');
+            motherElem.appendChild(listElem);
+        </script>
+    </body>
+</html>

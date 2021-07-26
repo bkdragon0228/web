@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript3</title>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .images img {
+                width: 100px;
+            }
+            .images {
+                display: inline-block;
+                list-style: none;
+                /* border: 1px solid red; */
+            }
+            .link-google {
+                color: red;
+            }
+            .special {
+                background-color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">JS, DOM</h1>
+        <div>
+            <ul>
+                <li class="images">
+                    <img src="./다운로드.png" alt="" />
+                    <a class="link-google" href="http://google.com">Google</a>
+                </li>
+                <li class="images"><img src="./images (1).png" alt="" /></li>
+                <li class="images"><img src="./images.png" alt="" /></li>
+            </ul>
+        </div>
+        <script>
+            // 클래스 넣다 빼기
+            let link = document.querySelector('.images a');
+            link.className = 'special'; // css class가 아예 바뀌었음으로
+            // 원래 클래스의 css 값들은 적용이 안된다.
+            link.className = 'special link-google'; // 이러면 둘 다 적용
+            // 통쨰로 바꾸는거 말고 추가만 하려면
+            link.classList.add('special'); // special 클래스만 추가!
+            link.classList.remove('special'); // 삭제
+
+            console.log(link.classList.contains('special')); // false
+            // 클래스를 가지고 있는지 확인하는 함수
+        </script>
+    </body>
+</html>

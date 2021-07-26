@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript2</title>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .images img {
+                width: 100px;
+            }
+            .images {
+                display: inline-block;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">JS, DOM</h1>
+        <div>
+            <ul>
+                <li class="images">
+                    <img src="./다운로드.png" alt="" />
+                    <a class="link-google" href="http://google.com">Google</a>
+                </li>
+                <li class="images"><img src="./images (1).png" alt="" /></li>
+                <li class="images"><img src="./images.png" alt="" /></li>
+            </ul>
+        </div>
+        <script>
+            let link = document.querySelector('.images a');
+            console.log(link.getAttribute('href')); //속성명을 문자열로
+            console.log(link.getAttribute('class')); //link-google
+
+            link.setAttribute('href', 'http://naver.com'); // 바꾸고싶은 속성, 값
+            console.log(link.getAttribute('href')); // 값이 바뀌는 걸 확인.
+        </script>
+    </body>
+</html>

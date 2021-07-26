@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript3</title>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .images img {
+                width: 100px;
+            }
+            .images {
+                display: inline-block;
+                list-style: none;
+                /* border: 1px solid red; */
+            }
+            .link-google {
+                color: red;
+            }
+            .special {
+                background-color: pink;
+            }
+            .btn {
+                font-size: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">JS, EVENT</h1>
+        <div>
+            <ul class="mother">
+                <li class="images">
+                    <img src="./다운로드.png" alt="" />
+                    <a class="link-google" href="http://google.com">Google</a>
+                </li>
+                <li class="images"><img src="./images (1).png" alt="" /></li>
+                <li class="images"><img src="./images.png" alt="" /></li>
+            </ul>
+        </div>
+        <button class="btn">클릭하세요.</button>
+        <script>
+            let btn = document.querySelector('.btn');
+            let mainTitle = document.querySelector('#main_title');
+
+            function btnClickHandler() {
+                mainTitle.style.background = 'dodgerblue';
+            }
+
+            // btn.onclick = btnClickHandler;
+            // btn.addEventListener('click', btnClickHandler);
+
+            btn.addEventListener('click', () => {
+                mainTitle.style.background = 'dodgerblue';
+            }); // 화살표 함수활용, 인라인 css로 들어간다!
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>getElment*, querySelector</title>
+    </head>
+    <body>
+        <div id="elem">
+            <div id="ele_content">Element</div>
+        </div>
+
+        <ul>
+            <li>1-1</li>
+            <li>1-2</li>
+        </ul>
+        <ul>
+            <li>2-1</li>
+            <li>2-2</li>
+        </ul>
+        <table id="table">
+            <tr>
+                <td>나이 :</td>
+                <td>
+                    <label>
+                        <input type="radio" name="age" value="young" checked />
+                        18세 미만
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="young" /> 18세
+                        이상, 60세 미만
+                    </label>
+                    <label>
+                        <input type="radio" name="age" value="young" /> 60세
+                        이상
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            let elem = document.getElementById('elem'); // 요소를 아이디로 얻기
+            elem.style.background = 'red'; // 배경색 바꾸기
+
+            let elements = document.querySelectorAll('ul > li:last-child'); // css 선택자를 활용하는 점에서 유용!
+            // 가상 클래스도 사용가능!
+            // querySelectoAll(':hover'); 를 하게되면 hover상태인 요소 모두를 반환하게 된다.
+
+            for (let i of elements) {
+                console.log(i);
+            } // 1-2, 2-2 를 출력함.
+
+            //matches
+            // css 선택자와 일치하는 것을 걸러줌
+            for (let i of document.body.children) {
+                if (i.matches('ul')) {
+                    console.log(i);
+                }
+            }
+
+            console.clear();
+            let inputs = document.getElementsByTagName('input');
+
+            for (let ele of inputs) {
+                console.log(ele);
+            }
+            // tagname, className 등등이 있다.
+            //qureySelector는 하나만 반환한다.
+        </script>
+    </body>
+</html>

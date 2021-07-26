@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript</title>
+        <script>
+            // 태그하나하나를 객체로 보는 모델 : Dom
+            // document object model(dom)
+            // 원래는 헤드 안에 script를 넣어야함
+            let title0 = document.getElementById('main_title');
+            // id를 이용해 엘리먼트를 가져온다.
+            console.log(title0); // null이 찍힌다. 위에서부터 읽기 떄문!
+
+            // window.onload = function () {
+            //     let title = document.getElementById('main_title');
+            //     console.log(title); // 이제 됨~
+            // };
+
+            // window.addEventListener('load', function () {
+            //     let title = document.getElementById('main_title');
+            //     console.log(title);
+            // }); // addEventListener 라는 메서드를 사용한 형태, 전역객체의 메서드
+
+            window.addEventListener('DOMContentLoaded', function () {
+                let title = document.getElementById('main_title');
+                console.log(title);
+            }); //dom구조만 로드되면 실행된다. 데이터가 로드되지 않아도 된다.
+        </script>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .images img {
+                width: 100px;
+                /* height: 100px; */
+            }
+            .images {
+                display: inline-block;
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">
+            <span>hello</span>
+            <span>hi</span>
+            <span>bye</span>
+            JS, DOM
+            <small>small</small>
+        </h1>
+        <div>
+            <ul>
+                <li class="images"><img src="./다운로드.png" alt="" /></li>
+                <li class="images"><img src="./images (1).png" alt="" /></li>
+                <li class="images"><img src="./images.png" alt="" /></li>
+            </ul>
+        </div>
+        <script>
+            let mainTitle = document.querySelector('#main_title');
+            let small = document.querySelector('#main_title small');
+            // css 선택자로 가져옴!
+            let imageEX = document.querySelectorAll('.images');
+            //원래 하나만 가져오고 all을 붙이면 다가져옴
+
+            for (let i = 0; i < imageEX.length; i++) {
+                imageEX[i].style.border = '1px solid red';
+            }
+        </script>
+        <script>
+            // 위에서 생긴 문제를 해결하기 위해 아래에 작성한다.
+            let title = document.getElementById('main_title');
+            let titleSpan = title.getElementsByTagName('span'); // 배열처럼 들어감.
+            //id는 하나뿐이라 단수, 태그이름은 복수!
+            console.log(titleSpan);
+            console.log(titleSpan[0], titleSpan[2]); // hello, bye
+        </script>
+    </body>
+</html>

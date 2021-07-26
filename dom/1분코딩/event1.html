@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hello javascript3</title>
+        <style>
+            body {
+                font-size: 3rem;
+            }
+            h1 {
+                background-color: #fff000;
+            }
+            .menu {
+                display: flex;
+                background: yellowgreen;
+            }
+            .menu_link {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                color: #fff;
+                background-color: dodgerblue;
+                list-style: none;
+                text-decoration: none;
+                flex: 1 1 auto;
+            }
+            .menu_active {
+                background: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main_title">JS, EVENT</h1>
+        <nav class="menu">
+            <a href="#" class="menu_link" data-menu="1">menu1</a>
+            <a href="#" class="menu_link" data-menu="2">menu2</a>
+            <a href="#" class="menu_link" data-menu="3">menu3</a>
+        </nav>
+
+        <script>
+            //이벤트 위임
+            //상위 엘리먼트에 이벤트리스너를 등록하고 자식을 걸러서 사용
+            let currentMenu;
+            let menu = document.querySelector('.menu');
+
+            function clickHandler(e) {
+                // 이벤트 리스너 매개변수로 함수를 사용하면 자동으로 들어가는 이벤트객체!
+                // 발생한 이벤트에 대한 정보를 담고있다.
+                // console.log(e.currentTarget); //this와 같다.
+                // console.log(e.target); // this로는 잡을 수 없는 것을 잡을 수 있다.
+
+                if (currentMenu) {
+                    currentMenu.classList.remove('menu_active');
+                }
+                e.target.classList.add('menu_active');
+                currentMenu = e.target;
+            }
+
+            menu.addEventListener('click', clickHandler);
+        </script>
+
+        <!-- <script>
+            let currentMenu; // 현재 활성화된 메뉴를 담을 변수, point!
+            let menuLinks = document.querySelectorAll('.menu_link');
+
+            function clickMenuHandler() {
+                // for (let i = 0; i < menuLinks.length; i++) {
+                //     menuLinks[i].classList.remove('menu_active');
+                // } // for문이라 오래걸림
+
+                // let active = document.querySelector('.menu_active');
+                // if (active) {
+                //     active.classList.remove('menu_active');
+                // } // dom 다 뒤져야해서 느림
+
+                if (currentMenu) {
+                    currentMenu.classList.remove('menu_active');
+                }
+                this.classList.add('menu_active');
+                currentMenu = this;
+            }
+
+            for (let i of menuLinks) {
+                i.addEventListener('click', clickMenuHandler);
+            }
+        </script> -->
+    </body>
+</html>
