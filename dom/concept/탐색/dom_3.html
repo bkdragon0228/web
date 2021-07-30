@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>속성과 프로퍼티</title>
+    </head>
+    <body>
+        <script>
+            //요소 노드(element node)에서 대부분의 표준 HTML 속성(attribute)은 DOM 객체의 프로퍼티(property)가 된다.
+
+            // 새로운 프로퍼티 만들기
+            document.body.myData = {
+                name: 'bk',
+                title: 'bkboy',
+            };
+            console.log(document.body.myData.title);
+
+            // 새로운 메서드 만들기
+            document.body.sayTagName = function () {
+                console.log(this.tagName);
+            };
+            document.body.sayTagName(); // BODY
+
+            //프로토타입으로 모든 요소노드에서 메서드 사용하게 하기
+            Element.prototype.sayHi = function () {
+                console.log(`hello, I'm ${this.tagName}`);
+            };
+            document.documentElement.sayHi(); // hello, I'm HTML
+        </script>
+    </body>
+</html>

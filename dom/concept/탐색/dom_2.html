@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>주요 노드 프로퍼티</title>
+    </head>
+    <body>
+        <p>p 태그</p>
+        <div>div 태그</div>
+        <div id="elem">hello <b>World</b></div>
+        <div class="divex">Hello World!</div>
+        <script>
+            // alert(document.body instanceof HTMLBodyElement); // true
+            // alert(document.body instanceof HTMLElement); // true
+            // alert(document.body instanceof Element); // true
+            // alert(document.body instanceof Node); // true
+            // alert(document.body instanceof EventTarget); // true
+
+            // nodeType 프로퍼티
+            // 요소노드 ==1, 텍스트노드==3, 문서객체 ==9
+
+            //nodeName, tagName
+            console.log(document.body.nodeName); //BODY
+            console.log(document.body.tagName); //BODY
+            // tagName은 요소 노드에만 존재한다.
+            // nodeName은 모든 노드에 있다, 요소노드에 호출하면 tagName과 같은 역할을 한다.
+
+            //innerHTML
+            console.log(document.documentElement === HTMLElement);
+            console.log(document.documentElement);
+            console.log(HTMLElement);
+
+            console.log(document.body.innerHTML);
+            document.body.innerHTML = 'new Body<br>';
+            // console.log(document.body.innerHTML);
+            document.body.innerHTML += 'hello my name is bkboy';
+
+            console.clear();
+        </script>
+    </body>
+</html>
