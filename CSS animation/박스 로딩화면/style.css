@@ -1,0 +1,64 @@
+body {
+    margin: 0; 
+    display: flex;            
+    justify-content: center;  
+    align-items: center;      
+    height: 100vh;            
+  }
+  .loading {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      /* span에 absolute를 주면 이제 body가 아닌
+      div.loading을 기준으로 적용된다. */
+
+  }
+  .loading span {
+    position: absolute;
+     width : 20px;
+     height: 20px;
+     background-color: gray;
+     top: 0;
+     left: 0;
+     animation: loading 1.5s linear infinite;
+     /* timing-function 값이다 : 부드럽게 
+    애니메이션 속도(가속,감속, 시간간격설정)*/
+  }
+
+  .loading span:nth-child(1){
+      animation-delay: 0s;
+      background-color: pink;
+  }
+  .loading span:nth-child(2){
+      animation-delay: 0.8s;
+      background-color: orange;
+  }
+
+
+  @keyframes loading {
+    0%,
+    100% {
+      top: 0;       /* 시계방향으로 이동하게 top, left설정 */
+      left: 0;  
+      background-color: coral;
+    }
+    25% {
+      top: 0;
+      left: calc(100% - 20px);
+      /* 자기 자신의 부모 안에서 100%위치에 있도록 calc로 설정 */
+      /* 왼쪽 100%에 있는 것임
+          부모의 100%에서 자기 너비를 뺴준것 */
+      /* calc(100% - 자기자신의 너비를 뺌) */
+      background-color: greenyellow;
+    }
+    50% {
+      top: calc(100% - 20px);
+      left: calc(100% - 20px);
+      background-color: pink;
+    }
+    75% {
+      top: calc(100% - 20px);
+      left: 0;
+      background-color: rgb(150, 64, 117);
+    }
+  }

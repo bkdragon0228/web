@@ -17,6 +17,7 @@ body {
     /* span을 동그랗게 */
     animation: loading 1s 0s linear infinite;
     /*        이름  걸리는시간 딜레이타임 부드럽게 무한반복*/
+    /* animation : 이름 진행시간 가속도 지연시간 반복횟수 연결방향 */
 
 }
 .loading span:nth-child(1){
