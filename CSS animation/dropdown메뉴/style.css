@@ -1,0 +1,25 @@
+a {
+    color: #222;
+    text-decoration: none;
+}
+.drop-btn {
+    width: 200px;
+    padding:10px;
+    font-size: 1.2rem;
+    background-color: yellowgreen;
+    color: #fff;
+    border: none;
+}
+.drop-submenu {
+    display: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.17);
+    width: 200px;
+    text-align: center;
+}
+.drop-submenu a {
+    display: block;
+    /* 세로로 나열 */
+}
+.dropdown:hover .drop-submenu {
+    display: block;
+}
