@@ -14,4 +14,4 @@ function changeLight() {
     // 어트리뷰트에 준 color를 이용!
 }
 
-setInterval(changeLight, 2000);
+setInterval(changeLight, 3000);

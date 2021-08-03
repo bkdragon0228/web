@@ -1,0 +1,83 @@
+body {
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color:#222;
+}
+.sns {
+    background-color: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.13);
+}
+.sns a {
+    border:5px solid white;
+    display: inline-block; 
+    /* flex로 배치했는데도 쓴 이유는 크기 조절이 가능하기 떄문이다. */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 2rem;
+    background-color: #fff;
+    margin: 10px;
+
+    text-align: center;
+    /* a태그 안에 아이콘을 수평정렬 */
+    line-height: 2.4;
+    /* 수직정렬 */
+    position: relative;
+    /* :before의 위치를 고정하기 위해 */
+    overflow: hidden;
+    /* 후에 :before의 넘치는 부분을 안보이게 하려고 */
+}
+.sns a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    left : 0;
+    bottom: 0; 
+    /* 아래쪽에 있고 */
+    background-color: blue;
+    transition: 0.5s;
+}
+.sns a:hover:before {
+    height: 100%;
+    /* 위로 올라오게 한다. */
+}
+/* before별로 다른 배경색 부여 */
+.sns a:nth-child(1):before{
+    background-color: #3b5999;
+}
+
+.sns a:nth-child(2):before{
+    background-color: #55acee;
+    
+}
+
+.sns a:nth-child(3):before{
+    background-color: #dd4b39;
+    
+}
+
+.sns a:nth-child(4):before{
+    background-color: #0077B5;
+    
+}
+
+.sns a:nth-child(5):before{
+    background-color: #e4405f;
+}
+.sns a svg {
+    position: relative;
+    transition: 0.5;
+}
+.sns a:hover svg {
+    transform: rotateY(360deg);
+    color:white;
+}
