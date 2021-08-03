@@ -1,0 +1,46 @@
+a {
+    color: #222;
+    text-decoration: none;
+}
+.items {
+    border: 1px solid while;
+    text-align: center;
+}
+.item {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: orange;
+}
+.caption {
+    width: 300px;
+    height: 300px;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    /* 내용물이 부모보다 커지는 걸 막기 위해 
+    border-box로 바꿈 */
+    padding-top: 40px;
+    opacity: 0;
+    /* 투명도 0 */
+    transition: 0.5s;
+    /*  이벤트 발생을 0.5s 동안 */
+}
+.item:hover .caption {
+    opacity: 1;
+}
+.caption a {
+    color: #fff;
+    background-color: teal;
+    padding: 7px;
+    background-origin: 3px;
+}
+.caption a:hover {
+    background-color: #fff;
+    color:#000;
+}
