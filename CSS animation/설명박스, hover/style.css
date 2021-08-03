@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* 찌그러진 원 만들기 */
+.square {
+    width: 400px;
+    height: 400px;
+    position: relative;
+
+    /* squre는 그냥 틀이다. */
+}
+.square span {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    /* 부모요소와 같은 크기로 만들었다. */
+    border: 1px solid black;
+    border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+    /* border-radius : /를 이용하여 2가지를 %를 입력하면 찌그러진 원을 만들 수 있음 */
+    transition: 0.5s; 
+    /* 이 요소에 이벤트 발생시 .5s의 딜레이를 주고 발생시킴 */
+}
+.square:hover span {
+    border: none;
+}
+.square span:nth-child(1){
+    animation: circle 6s linear infinite;
+}
+.square span:nth-child(2){
+    animation: circle 4s linear infinite reverse;
+}
+.square span:nth-child(3){
+    animation: circle 10s linear infinite;
+}
+.square:hover span:nth-child(1) {                  
+    opacity: 0.3;                              /* 투명도가 낮아짐 */
+    background-color: crimson;                 /* 배경색이 변경됨 */
+  } 
+  .square:hover span:nth-child(2) {                
+    opacity: 0.6;
+    background-color: darkorange;
+  }
+  .square:hover span:nth-child(3) {                
+    opacity: 0.9;
+    background-color: yellowgreen;
+  }
+  @keyframes circle {
+      0%{
+          transform: rotate(0);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
+  .square div {
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      /* 중앙에 위치시킴 */
+      transform: translate(-50%, -50%); 
+      /* top, left에 50%를 주고, translate(-top값, -left값)을 넣어 항상 중앙에 오게 한다. */
+      width: 70%;
+      text-align: center;
+      color: white;
+  }
