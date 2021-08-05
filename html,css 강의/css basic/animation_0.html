@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: move, fadeOut, changeColor;
+                animation-duration: 5s;
+                /* animation의 사이클 초 */
+                /* timing function은 transition과 동일한 속성 */
+                animation-iteration-count: infinite;
+                /*반복 횟수, infinite로 무한 반복 가능 */
+                animation-direction: alternate;
+                /* normal : 정방향, reverse: 역방향
+                 alternate: 홀수번쨰 정방향, 짝수번쨰 역방향 */
+            }
+
+            @keyframes move {
+                from {
+                    left: 0;
+                }
+                to {
+                    left: 300px;
+                }
+            }
+            @keyframes fadeOut {
+                from {
+                    opacity: 1;
+                }
+                to {
+                    opacity: 0.5;
+                }
+            }
+            @keyframes changeColor {
+                from {
+                    background: red;
+                }
+                to {
+                    background: dodgerblue;
+                }
+            }
+            div:hover {
+                background: yellow;
+                animation-play-state: paused;
+                /* 마우스 호버시 정지하게 */
+            }
+            div:active {
+                animation-play-state: running;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>

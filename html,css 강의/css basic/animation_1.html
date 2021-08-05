@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                animation-name: move;
+                animation-duration: 5s;
+                animation-play-state: paused; /* 초기 애니메이션 재생 상태: 정지 */
+                animation-iteration-count: infinite;
+            }
+
+            /* @keyframes rule */
+            @keyframes move {
+                from {
+                    left: 0;
+                }
+
+                to {
+                    left: 300px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <button class="start">start animation</button>
+        <button class="pause">pause animation</button>
+
+        <script>
+            const box = document.querySelector('.box');
+            document.querySelector('.start').addEventListener('click', () => {
+                box.style.animationPlayState = 'running';
+            });
+            document.querySelector('.pause').addevetListner('click', () => {
+                box.style.animationPlayState = 'paused';
+            });
+        </script>
+        <script>
+            // animation : name druration function delay count direction fill-mode play-state
+            // 기본값 : none 0 ease 0 1 normal (none) running
+        </script>
+    </body>
+</html>
