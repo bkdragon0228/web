@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            html,
+            body,
+            div,
+            span,
+            applet,
+            object,
+            iframe,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            blockquote,
+            pre,
+            a,
+            abbr,
+            acronym,
+            address,
+            big,
+            cite,
+            code,
+            del,
+            dfn,
+            em,
+            img,
+            ins,
+            kbd,
+            q,
+            s,
+            samp,
+            small,
+            strike,
+            strong,
+            sub,
+            sup,
+            tt,
+            var,
+            b,
+            u,
+            i,
+            center,
+            dl,
+            dt,
+            dd,
+            ol,
+            ul,
+            li,
+            fieldset,
+            form,
+            label,
+            legend,
+            table,
+            caption,
+            tbody,
+            tfoot,
+            thead,
+            tr,
+            th,
+            td,
+            article,
+            aside,
+            canvas,
+            details,
+            embed,
+            figure,
+            figcaption,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            output,
+            ruby,
+            section,
+            summary,
+            time,
+            mark,
+            audio,
+            video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article,
+            aside,
+            details,
+            figcaption,
+            figure,
+            footer,
+            header,
+            hgroup,
+            menu,
+            nav,
+            section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol,
+            ul {
+                list-style: none;
+            }
+            blockquote,
+            q {
+                quotes: none;
+            }
+            blockquote:before,
+            blockquote:after,
+            q:before,
+            q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+        </style>
+        <style>
+            body {
+                font-size: 2rem;
+            }
+            .container {
+                background-color: lightgray;
+                /* height: 500px; */
+                display: grid;
+                /* grid-template-columns: 40% 60%; */
+                /* fr을 사용하면 gap을 줘도 100%를 넘어서지 않는다. */
+                grid-template-columns: 4fr 6fr;
+                grid-gap: 1rem;
+
+                /* grid-template-columns: 1fr 1fr 1fr; */
+                /* grid-template-columns: repeat(3, 1fr); */
+                /* 반복구문 */
+
+                /* grid-template-columns: 200px 1fr; */
+                /* 고정시켜놓고 옆은 움직이게 */
+
+                grid-template-columns: repeat(3, 1fr);
+
+                /* 컨텐츠의 크기는 다 다른데 box의 크기를 일정하게 하고 싶을 때 */
+                /* grid-auto-rows: 200px; */
+                grid-auto-rows: minmax(200px, auto);
+                /* 200px까진 맞추고 더커지면 자동으로 */
+
+                /* 정렬 */
+                /* justify-items: center; */
+                /* align-items: center; */
+            }
+            .item {
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+            .item:nth-child(1) {
+                grid-column: 1/4;
+                /* 1부터 4까지 */
+            }
+            .item:nth-child(4) {
+                grid-row: 2/4;
+                grid-column: 3;
+                /* 시작점만 */
+            }
+            .item:nth-child(5) {
+                /* 각각 정렬 */
+                /* justify-self: start; */
+                /* align-self: end; */
+            }
+            .item:nth-child(9) {
+                grid-row: 3/5;
+                grid-column: 3;
+            }
+            .item:nth-child(odd) {
+                background-color: rgba(255, 255, 0, 0.5);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+        </div>
+    </body>
+</html>
